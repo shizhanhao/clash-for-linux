@@ -146,6 +146,13 @@ $ proxy_off
 - 访问 Clash Dashboard
 
 通过浏览器访问 `start.sh` 执行成功后输出的地址，例如：http://192.168.0.1:9090/ui
+- {"message":"Unauthorized"}
+✅ 解决方法
+查看config.yaml里面的：secret
+例如：secret: "mysecret123"
+启动 Clash 后，打开 Web UI（如 yacd），加上 token 参数：
+http://localhost:9090/ui?token=mysecret123
+
 
 - 登录管理界面
 
